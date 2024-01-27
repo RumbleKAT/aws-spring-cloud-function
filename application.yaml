@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    function:
+      definition: lambdaApiGatewayFunction
+  main:
+    banner-mode: off
+  profile:
+    active: local
+
+logging:
+  level:
+    root: info
