@@ -1,11 +1,14 @@
 spring:
   cloud:
     function:
-      definition: lambdaApiGatewayFunction
+      definition: reverseString
   main:
     banner-mode: off
   profile:
     active: local
+
+jwt:
+  secret: 'sample'
 
 logging:
   level:

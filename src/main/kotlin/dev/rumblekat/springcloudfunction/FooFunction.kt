@@ -8,10 +8,10 @@ import java.util.function.Function
 @Component
 class FooFunction {
 
-//    @Bean
-//    fun reverseString(): (String) -> String {
-//        return { it.reversed() }
-//    }
+    @Bean
+    fun reverseString(): (String) -> String {
+        return { it.reversed() }
+    }
     @Bean
     fun lambdaApiGatewayFunction(): Function<Map<String, Object>, List<String>> {
         return LambdaApiGateway()
