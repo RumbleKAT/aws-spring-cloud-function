@@ -1,7 +1,7 @@
 spring:
   cloud:
     function:
-      definition: reverseString
+      definition: route
   main:
     banner-mode: off
   profile:

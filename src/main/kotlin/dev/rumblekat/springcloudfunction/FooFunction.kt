@@ -12,6 +12,11 @@ class FooFunction {
     fun reverseString(): (String) -> String {
         return { it.reversed() }
     }
+
+    @Bean
+    fun uppercaseString(): (String) -> String {
+        return { it.uppercase() }
+    }
     @Bean
     fun lambdaApiGatewayFunction(): Function<Map<String, Object>, List<String>> {
         return LambdaApiGateway()

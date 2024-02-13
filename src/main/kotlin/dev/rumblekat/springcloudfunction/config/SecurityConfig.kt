@@ -17,7 +17,7 @@ class SecurityConfig(val jwtRequestFilter: JwtRequestFilter){
         http
             .csrf { filter -> filter.disable() }
             .authorizeHttpRequests { authz -> authz
-                .requestMatchers("/reverseString/**").permitAll()
+                .requestMatchers("/route/**").permitAll()
                 .anyRequest().authenticated()
             }
             .addFilterBefore(JwtRequestFilter(), UsernamePasswordAuthenticationFilter::class.java)
