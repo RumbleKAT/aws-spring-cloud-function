@@ -1,0 +1,12 @@
+### reverseString
+POST http://localhost:8080/reverseString
+Content-Type: text/plain
+
+test2
+
+### upperString
+POST http://localhost:8080/uppercaseString
+Content-Type: text/plain
+
+testas
+

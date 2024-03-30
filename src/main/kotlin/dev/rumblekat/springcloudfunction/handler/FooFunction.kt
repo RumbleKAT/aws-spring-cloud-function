@@ -1,9 +1,7 @@
-package dev.rumblekat.springcloudfunction
+package dev.rumblekat.springcloudfunction.handler
 
-import dev.rumblekat.springcloudfunction.handler.LambdaApiGateway
 import org.springframework.context.annotation.Bean
 import org.springframework.stereotype.Component
-import java.util.function.Function
 
 @Component
 class FooFunction {
@@ -16,10 +14,6 @@ class FooFunction {
     @Bean
     fun uppercaseString(): (String) -> String {
         return { it.uppercase() }
-    }
-    @Bean
-    fun lambdaApiGatewayFunction(): Function<Map<String, Object>, List<String>> {
-        return LambdaApiGateway()
     }
 
 }
