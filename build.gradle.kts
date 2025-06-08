@@ -69,3 +69,7 @@ tasks.bootBuildImage {
     builder.set("paketobuildpacks/builder-jammy-base:latest")
     environment.put("BP_NATIVE_IMAGE", "true")
 }
+
+graalvmNative {
+    toolchainDetection.set(false)
+}
