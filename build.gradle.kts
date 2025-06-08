@@ -63,6 +63,9 @@ tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
         mergeStrategy = "append"
     }
 }
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
 
 tasks.bootBuildImage {
     builder.set("paketobuildpacks/builder-jammy-base:latest")
