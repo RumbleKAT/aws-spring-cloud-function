@@ -4,6 +4,7 @@ plugins {
     id("org.springframework.boot") version "3.1.8"
     id("io.spring.dependency-management") version "1.1.4"
     id("com.github.johnrengelman.shadow") version "7.1.2"
+    id("org.graalvm.buildtools.native") version "0.9.28"
     kotlin("jvm") version "1.8.22"
     kotlin("plugin.spring") version "1.8.22"
 }
@@ -69,4 +70,9 @@ tasks.withType<Test> {
 
 tasks.bootBuildImage {
     builder.set("paketobuildpacks/builder-jammy-base:latest")
+    environment.put("BP_NATIVE_IMAGE", "true")
+}
+
+graalvmNative {
+    toolchainDetection.set(false)
 }
