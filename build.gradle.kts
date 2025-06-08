@@ -14,6 +14,9 @@ version = "0.0.1-SNAPSHOT"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
 
 repositories {
@@ -72,4 +75,9 @@ tasks.bootBuildImage {
 
 graalvmNative {
     toolchainDetection.set(false)
+    binaries.all {
+        javaLauncher.set(javaToolchains.launcherFor {
+            languageVersion.set(JavaLanguageVersion.of(21))
+        })
+    }
 }
